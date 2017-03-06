@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.alltosun.ceshi.imitationjanbook.Activity.Fragment.FocusonFragment">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <!--自定义的ScrollView 包裹，轮播图和滑动列表-->
+        <Myview.MyScrollView
+            android:id="@+id/myScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorPrimary">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wepp" />
+                </RelativeLayout>
+
+              <Myview.ItemRemoveRecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+                </Myview.ItemRemoveRecyclerView>
+
+
+            </LinearLayout>
+        </Myview.MyScrollView>
+
+        <!--承载搜索框的布局，是透明度渐变和搜索框动态变化的布局-->
+        <RelativeLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="100dp"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/serch"
+                android:drawableLeft="@mipmap/search"
+                android:hint="搜索"
+                android:padding="5dip"
+                android:singleLine="true"
+                android:textColorHint="#AAAAAA"
+                android:textSize="14dip" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>
